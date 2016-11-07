@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="155"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tPb-5s-Ud2" id="eSU-2c-eYW">
-                                    <frame key="frameInset" width="375" height="154"/>
+                                    <frame key="frameInset" width="375" height="154.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3v-AR-vNE">
@@ -127,7 +127,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DIJ-s6-f7q" id="Ha3-6A-24f">
-                                    <frame key="frameInset" width="375" height="89"/>
+                                    <frame key="frameInset" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMA-rb-wmf">
@@ -194,10 +194,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="pDw-mv-ZfE"/>
+                    <connections>
+                        <segue destination="Cf6-Zl-BEZ" kind="show" identifier="ShowPullRequest" id="SwE-1H-AoG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjP-pu-fyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3332" y="136.28185907046478"/>
+        </scene>
+        <!--Pull Request View Controller-->
+        <scene sceneID="Vfp-DG-AKz">
+            <objects>
+                <viewController id="Cf6-Zl-BEZ" customClass="PullRequestViewController" customModule="Desafio_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5DS-ul-qfA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wiq-qg-Nbk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="suS-y8-Hz7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDu-iC-C8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4288" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mal-6e-XCF">

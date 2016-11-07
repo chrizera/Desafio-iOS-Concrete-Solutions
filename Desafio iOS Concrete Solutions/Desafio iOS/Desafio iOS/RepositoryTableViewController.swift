@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class RepositoryTableViewController: UITableViewController {
     
@@ -14,6 +15,8 @@ class RepositoryTableViewController: UITableViewController {
     var repositoryName = String()
     var userAvatar = UIImage()
     var pullRequestList = [PullRequest]()
+    var pullRequestLink = String()
+    var pullRequestWebView = WKWebView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +24,7 @@ class RepositoryTableViewController: UITableViewController {
         navigationItem.title = repositoryName
 
         let link = "https://api.github.com/repos/\(userName)/\(repositoryName)/pulls"
-        print(link)
-        print("---------------------------------")
+        //print(link)
         guard let url = URL(string: link) else {return}
         guard let data = try? Data(contentsOf: url) else {return}
         
@@ -30,11 +32,13 @@ class RepositoryTableViewController: UITableViewController {
             
             for items in json {
                 
-                let pullRequest = PullRequest(repositoryName: "", userAvatar: nil, userName: "", pullRequestName: "", pullRequestBody: "")
+                let pullRequest = PullRequest(repositoryName: "", userAvatar: nil, userName: "", pullRequestName: "", pullRequestBody: "", pullRequestLink: "")
                 let dict = items["user"] as! [String:Any]
                 
                 pullRequest.pullRequestName = items["title"] as! String
                 pullRequest.pullRequestBody = items["body"] as! String
+                pullRequest.pullRequestLink = items["html_url"] as! String
+                
                 pullRequest.userName = dict["login"] as! String
                 
                 let imageLink = dict["avatar_url"] as! String
@@ -43,6 +47,7 @@ class RepositoryTableViewController: UITableViewController {
                 let userAvatar = UIImage(data: data)
                 
                 pullRequest.userAvatar = userAvatar
+                
                 
                 pullRequestList.append(pullRequest)
             }
@@ -71,6 +76,24 @@ class RepositoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return pullRequestList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        pullRequestLink = pullRequestList[indexPath.row].pullRequestLink
+        
+        guard let url = URL(string: pullRequestLink) else {return}
+        let request = URLRequest(url: url)
+        
+        let rect = view.frame
+        
+        let webConfiguration = WKWebViewConfiguration()
+        let webView = WKWebView(frame: rect, configuration: webConfiguration)
+        webView.load(request)
+        
+        pullRequestWebView = webView
+        
+        self.performSegue(withIdentifier: "ShowPullRequest", sender: self)
     }
 
     
@@ -125,14 +148,19 @@ class RepositoryTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let destination = segue.destination as? PullRequestViewController {
+            
+            destination.webView = pullRequestWebView
+        }
     }
-    */
+    
 
 }

@@ -14,11 +14,23 @@
 		BD3D20831DC110E5009C070B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3D20821DC110E5009C070B /* Assets.xcassets */; };
 		BD3D20861DC110E5009C070B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3D20841DC110E5009C070B /* LaunchScreen.storyboard */; };
 		BD3D208E1DC13685009C070B /* GitHubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3D208D1DC13685009C070B /* GitHubTableViewCell.swift */; };
+		BD5E7A461DCD387500DAAB0D /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E7A451DCD387500DAAB0D /* PullRequestViewController.swift */; };
+		BD70FF861DCD1C170018A297 /* GitHubTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD70FF851DCD1C170018A297 /* GitHubTableViewControllerTest.swift */; };
 		BD8049C71DCBDEF6008BACC8 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8049C61DCBDEF6008BACC8 /* PullRequest.swift */; };
 		BD815E731DC7B7620046A2BE /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD815E721DC7B7620046A2BE /* GitHub.swift */; };
 		BDEA16B21DC9301F002AB755 /* RepositoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA16B11DC9301F002AB755 /* RepositoryTableViewController.swift */; };
 		BDEA16B41DC93041002AB755 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA16B31DC93041002AB755 /* RepositoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD70FF7E1DCD12920018A297 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD3D20701DC110E5009C070B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD3D20771DC110E5009C070B;
+			remoteInfo = "Desafio iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BD0303C91DC7AB6900D285CF /* GitHubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +42,10 @@
 		BD3D20851DC110E5009C070B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD3D20871DC110E5009C070B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD3D208D1DC13685009C070B /* GitHubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewCell.swift; sourceTree = "<group>"; };
+		BD5E7A451DCD387500DAAB0D /* PullRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
+		BD70FF791DCD12920018A297 /* Desafio iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD70FF841DCD1C160018A297 /* Desafio iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Desafio iOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD70FF851DCD1C170018A297 /* GitHubTableViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewControllerTest.swift; sourceTree = "<group>"; };
 		BD8049C61DCBDEF6008BACC8 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
 		BD815E721DC7B7620046A2BE /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		BDEA16B11DC9301F002AB755 /* RepositoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +54,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		BD3D20751DC110E5009C070B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD70FF761DCD12920018A297 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3D20781DC110E5009C070B /* Desafio iOS.app */,
+				BD70FF791DCD12920018A297 /* Desafio iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +98,7 @@
 				BD815E711DC7B4930046A2BE /* Model */,
 				BD4E95F61DC400C30041C424 /* Controller */,
 				BD4E95F51DC400B60041C424 /* View */,
+				BD70FF831DCD1B7F0018A297 /* Tests */,
 			);
 			path = "Desafio iOS";
 			sourceTree = "<group>";
@@ -93,8 +118,18 @@
 				BD3D207D1DC110E5009C070B /* Teste.swift */,
 				BD0303C91DC7AB6900D285CF /* GitHubTableViewController.swift */,
 				BDEA16B11DC9301F002AB755 /* RepositoryTableViewController.swift */,
+				BD5E7A451DCD387500DAAB0D /* PullRequestViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		BD70FF831DCD1B7F0018A297 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BD70FF851DCD1C170018A297 /* GitHubTableViewControllerTest.swift */,
+				BD70FF841DCD1C160018A297 /* Desafio iOSTests-Bridging-Header.h */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 		BD815E711DC7B4930046A2BE /* Model */ = {
@@ -126,6 +161,24 @@
 			productReference = BD3D20781DC110E5009C070B /* Desafio iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BD70FF781DCD12920018A297 /* Desafio iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD70FF821DCD12920018A297 /* Build configuration list for PBXNativeTarget "Desafio iOSTests" */;
+			buildPhases = (
+				BD70FF751DCD12920018A297 /* Sources */,
+				BD70FF761DCD12920018A297 /* Frameworks */,
+				BD70FF771DCD12920018A297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD70FF7F1DCD12920018A297 /* PBXTargetDependency */,
+			);
+			name = "Desafio iOSTests";
+			productName = "Desafio iOSTests";
+			productReference = BD70FF791DCD12920018A297 /* Desafio iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +193,13 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2A7C9XFDQ7;
 						ProvisioningStyle = Automatic;
+					};
+					BD70FF781DCD12920018A297 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2A7C9XFDQ7;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BD3D20771DC110E5009C070B;
 					};
 				};
 			};
@@ -157,6 +217,7 @@
 			projectRoot = "";
 			targets = (
 				BD3D20771DC110E5009C070B /* Desafio iOS */,
+				BD70FF781DCD12920018A297 /* Desafio iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -172,6 +233,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD70FF771DCD12920018A297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -180,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD815E731DC7B7620046A2BE /* GitHub.swift in Sources */,
+				BD5E7A461DCD387500DAAB0D /* PullRequestViewController.swift in Sources */,
 				BD0303CA1DC7AB6900D285CF /* GitHubTableViewController.swift in Sources */,
 				BD8049C71DCBDEF6008BACC8 /* PullRequest.swift in Sources */,
 				BDEA16B41DC93041002AB755 /* RepositoryTableViewCell.swift in Sources */,
@@ -190,7 +259,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD70FF751DCD12920018A297 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD70FF861DCD1C170018A297 /* GitHubTableViewControllerTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD70FF7F1DCD12920018A297 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD3D20771DC110E5009C070B /* Desafio iOS */;
+			targetProxy = BD70FF7E1DCD12920018A297 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BD3D207F1DC110E5009C070B /* Main.storyboard */ = {
@@ -331,6 +416,39 @@
 			};
 			name = Release;
 		};
+		BD70FF801DCD12920018A297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2A7C9XFDQ7;
+				INFOPLIST_FILE = "Desafio iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aprendendo.Desafio-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Desafio iOS/Desafio iOSTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio iOS.app/Desafio iOS";
+			};
+			name = Debug;
+		};
+		BD70FF811DCD12920018A297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2A7C9XFDQ7;
+				INFOPLIST_FILE = "Desafio iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aprendendo.Desafio-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Desafio iOS/Desafio iOSTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio iOS.app/Desafio iOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -348,6 +466,15 @@
 			buildConfigurations = (
 				BD3D208B1DC110E5009C070B /* Debug */,
 				BD3D208C1DC110E5009C070B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD70FF821DCD12920018A297 /* Build configuration list for PBXNativeTarget "Desafio iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD70FF801DCD12920018A297 /* Debug */,
+				BD70FF811DCD12920018A297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
