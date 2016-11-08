@@ -1,64 +1,68 @@
 //
-//  RepositoryTableViewController.swift
+//  RepositoryAFTableViewController.swift
 //  Desafio iOS
 //
-//  Created by Christian Perrone on 01/11/16.
+//  Created by Christian Perrone on 08/11/16.
 //  Copyright © 2016 Christian Perrone. All rights reserved.
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import Foundation
 import WebKit
 
-class RepositoryTableViewController: UITableViewController {
+class RepositoryAFTableViewController: UITableViewController {
     
     var userName = String()
     var repositoryName = String()
-    var userAvatar = UIImage()
     var pullRequestList = [PullRequest]()
-    var pullRequestLink = String()
-    var pullRequestWebView = WKWebView()
+    var webView = WKWebView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = repositoryName
+        
+        parseJSON()
 
-        let link = "https://api.github.com/repos/\(userName)/\(repositoryName)/pulls"
-        //print(link)
-        guard let url = URL(string: link) else {return}
-        guard let data = try? Data(contentsOf: url) else {return}
-        
-        if let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String:Any]]{
-            
-            for items in json {
-                
-                let pullRequest = PullRequest(userAvatar: nil, userName: "", pullRequestName: "", pullRequestBody: "", pullRequestLink: "")
-                let dict = items["user"] as! [String:Any]
-                
-                pullRequest.pullRequestName = items["title"] as! String
-                pullRequest.pullRequestBody = items["body"] as! String
-                pullRequest.pullRequestLink = items["html_url"] as! String
-                
-                pullRequest.userName = dict["login"] as! String
-                
-                let imageLink = dict["avatar_url"] as! String
-                guard let imageURL = URL(string: imageLink) else {return}
-                guard let data = try? Data(contentsOf: imageURL) else {return}
-                let userAvatar = UIImage(data: data)
-                
-                pullRequest.userAvatar = userAvatar
-                
-                
-                pullRequestList.append(pullRequest)
-            }
-        }
-        
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func parseJSON() {
+        
+        let link = "https://api.github.com/repos/\(userName)/\(repositoryName)/pulls"
+        guard let url = URL(string: link) else {return}
+        
+        Alamofire.request(url).validate().responseJSON { (response) in
+            
+            let json = JSON(response.result.value)
+            
+            let pullRequestJSONArray = json.array!
+            
+            for items in pullRequestJSONArray {
+                
+                let pullRequest = PullRequest(userAvatar: nil, userName: "", pullRequestName: "", pullRequestBody: "", pullRequestLink: "")
+                
+                let img = items["user"]["avatar_url"].string!
+                guard let url = URL(string: img) else {return}
+                guard let data = try? Data(contentsOf: url) else {return}
+                
+                pullRequest.userAvatar = UIImage(data: data)
+                pullRequest.pullRequestBody = items["body"].string!
+                pullRequest.pullRequestName = items["title"].string!
+                pullRequest.pullRequestLink = items["html_url"].string!
+                pullRequest.userName = items["user"]["login"].string!
+                                
+                self.pullRequestList.append(pullRequest)
+                self.tableView.reloadData()
+
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,39 +79,36 @@ class RepositoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return pullRequestList.count
+        return self.pullRequestList.count
     }
+
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        pullRequestLink = pullRequestList[indexPath.row].pullRequestLink
-        
-        guard let url = URL(string: pullRequestLink) else {return}
+        let link = pullRequestList[indexPath.row].pullRequestLink
+        guard let url = URL(string: link) else {return}
         let request = URLRequest(url: url)
         
-        let rect = view.frame
-        
-        let webConfiguration = WKWebViewConfiguration()
-        let webView = WKWebView(frame: rect, configuration: webConfiguration)
+        let webViewRect = view.frame
+        let configuration = WKWebViewConfiguration()
+        webView = WKWebView(frame: webViewRect, configuration: configuration)
         webView.load(request)
         
-        pullRequestWebView = webView
-        
         self.performSegue(withIdentifier: "ShowPullRequest", sender: self)
+        
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShowPullRequestList", for: indexPath) as! RepositoryTableViewCell
 
         // Configure the cell...
-        
         let pullRequest = pullRequestList[indexPath.row]
         
         cell.pullRequestTitle.text = pullRequest.pullRequestName
         cell.pullRequestDescription.text = pullRequest.pullRequestBody
-        cell.userName.text = pullRequest.userName
         cell.userAvatar.image = pullRequest.userAvatar
+        cell.userName.text = pullRequest.userName
+        
 
         return cell
     }
@@ -158,7 +159,7 @@ class RepositoryTableViewController: UITableViewController {
         
         if let destination = segue.destination as? PullRequestViewController {
             
-            destination.webView = pullRequestWebView
+            destination.webView = webView
         }
     }
     

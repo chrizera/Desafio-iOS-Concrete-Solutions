@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B14672EF80A3422A396E511 /* Pods_Desafio_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACDD85F796A6D9AE2E30B71 /* Pods_Desafio_iOSTests.framework */; };
+		30F2293CC6F3DB553B3BE782 /* Pods_Desafio_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96B7AF3FD1DACACD2890426 /* Pods_Desafio_iOS.framework */; };
 		BD0303CA1DC7AB6900D285CF /* GitHubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0303C91DC7AB6900D285CF /* GitHubTableViewController.swift */; };
 		BD3D207C1DC110E5009C070B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3D207B1DC110E5009C070B /* AppDelegate.swift */; };
 		BD3D207E1DC110E5009C070B /* Teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3D207D1DC110E5009C070B /* Teste.swift */; };
@@ -14,8 +16,10 @@
 		BD3D20831DC110E5009C070B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3D20821DC110E5009C070B /* Assets.xcassets */; };
 		BD3D20861DC110E5009C070B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3D20841DC110E5009C070B /* LaunchScreen.storyboard */; };
 		BD3D208E1DC13685009C070B /* GitHubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3D208D1DC13685009C070B /* GitHubTableViewCell.swift */; };
+		BD48B3971DD0E522006FB1E2 /* Desafio_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B3961DD0E522006FB1E2 /* Desafio_iOSTests.swift */; };
 		BD5E7A461DCD387500DAAB0D /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E7A451DCD387500DAAB0D /* PullRequestViewController.swift */; };
-		BD70FF861DCD1C170018A297 /* GitHubTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD70FF851DCD1C170018A297 /* GitHubTableViewControllerTest.swift */; };
+		BD6564531DD23C6C005E6886 /* GitHubAFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6564521DD23C6C005E6886 /* GitHubAFTableViewController.swift */; };
+		BD6564551DD26990005E6886 /* RepositoryAFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6564541DD26990005E6886 /* RepositoryAFTableViewController.swift */; };
 		BD8049C71DCBDEF6008BACC8 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8049C61DCBDEF6008BACC8 /* PullRequest.swift */; };
 		BD815E731DC7B7620046A2BE /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD815E721DC7B7620046A2BE /* GitHub.swift */; };
 		BDEA16B21DC9301F002AB755 /* RepositoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA16B11DC9301F002AB755 /* RepositoryTableViewController.swift */; };
@@ -23,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BD70FF7E1DCD12920018A297 /* PBXContainerItemProxy */ = {
+		BD48B3991DD0E522006FB1E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD3D20701DC110E5009C070B /* Project object */;
 			proxyType = 1;
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F2A290F7B0CFB37D81D4A7E /* Pods-Desafio iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio iOSTests/Pods-Desafio iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5F254806890BB3070E9D5586 /* Pods-Desafio iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio iOS/Pods-Desafio iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6ACDD85F796A6D9AE2E30B71 /* Pods_Desafio_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B86B701E493C5CD8648E1ADC /* Pods-Desafio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio iOS/Pods-Desafio iOS.release.xcconfig"; sourceTree = "<group>"; };
 		BD0303C91DC7AB6900D285CF /* GitHubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewController.swift; sourceTree = "<group>"; };
 		BD3D20781DC110E5009C070B /* Desafio iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3D207B1DC110E5009C070B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,14 +50,18 @@
 		BD3D20851DC110E5009C070B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD3D20871DC110E5009C070B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD3D208D1DC13685009C070B /* GitHubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewCell.swift; sourceTree = "<group>"; };
+		BD48B3941DD0E522006FB1E2 /* Desafio iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD48B3961DD0E522006FB1E2 /* Desafio_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_iOSTests.swift; sourceTree = "<group>"; };
+		BD48B3981DD0E522006FB1E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD5E7A451DCD387500DAAB0D /* PullRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
-		BD70FF791DCD12920018A297 /* Desafio iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD70FF841DCD1C160018A297 /* Desafio iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Desafio iOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		BD70FF851DCD1C170018A297 /* GitHubTableViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewControllerTest.swift; sourceTree = "<group>"; };
+		BD6564521DD23C6C005E6886 /* GitHubAFTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAFTableViewController.swift; sourceTree = "<group>"; };
+		BD6564541DD26990005E6886 /* RepositoryAFTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryAFTableViewController.swift; sourceTree = "<group>"; };
 		BD8049C61DCBDEF6008BACC8 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
 		BD815E721DC7B7620046A2BE /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		BDEA16B11DC9301F002AB755 /* RepositoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewController.swift; sourceTree = "<group>"; };
 		BDEA16B31DC93041002AB755 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		CB50D43F2C4F12498228222C /* Pods-Desafio iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio iOSTests/Pods-Desafio iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F96B7AF3FD1DACACD2890426 /* Pods_Desafio_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,24 +69,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F2293CC6F3DB553B3BE782 /* Pods_Desafio_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD70FF761DCD12920018A297 /* Frameworks */ = {
+		BD48B3911DD0E522006FB1E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B14672EF80A3422A396E511 /* Pods_Desafio_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11B278F5F48EB4283BA2EDEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F96B7AF3FD1DACACD2890426 /* Pods_Desafio_iOS.framework */,
+				6ACDD85F796A6D9AE2E30B71 /* Pods_Desafio_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD3D206F1DC110E5009C070B = {
 			isa = PBXGroup;
 			children = (
 				BD3D207A1DC110E5009C070B /* Desafio iOS */,
+				BD48B3951DD0E522006FB1E2 /* Desafio iOSTests */,
 				BD3D20791DC110E5009C070B /* Products */,
+				E69B13EE483BD80CC92D1704 /* Pods */,
+				11B278F5F48EB4283BA2EDEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3D20781DC110E5009C070B /* Desafio iOS.app */,
-				BD70FF791DCD12920018A297 /* Desafio iOSTests.xctest */,
+				BD48B3941DD0E522006FB1E2 /* Desafio iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,9 +124,17 @@
 				BD815E711DC7B4930046A2BE /* Model */,
 				BD4E95F61DC400C30041C424 /* Controller */,
 				BD4E95F51DC400B60041C424 /* View */,
-				BD70FF831DCD1B7F0018A297 /* Tests */,
 			);
 			path = "Desafio iOS";
+			sourceTree = "<group>";
+		};
+		BD48B3951DD0E522006FB1E2 /* Desafio iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD48B3961DD0E522006FB1E2 /* Desafio_iOSTests.swift */,
+				BD48B3981DD0E522006FB1E2 /* Info.plist */,
+			);
+			path = "Desafio iOSTests";
 			sourceTree = "<group>";
 		};
 		BD4E95F51DC400B60041C424 /* View */ = {
@@ -117,19 +151,12 @@
 			children = (
 				BD3D207D1DC110E5009C070B /* Teste.swift */,
 				BD0303C91DC7AB6900D285CF /* GitHubTableViewController.swift */,
+				BD6564521DD23C6C005E6886 /* GitHubAFTableViewController.swift */,
 				BDEA16B11DC9301F002AB755 /* RepositoryTableViewController.swift */,
+				BD6564541DD26990005E6886 /* RepositoryAFTableViewController.swift */,
 				BD5E7A451DCD387500DAAB0D /* PullRequestViewController.swift */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		BD70FF831DCD1B7F0018A297 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				BD70FF851DCD1C170018A297 /* GitHubTableViewControllerTest.swift */,
-				BD70FF841DCD1C160018A297 /* Desafio iOSTests-Bridging-Header.h */,
-			);
-			name = Tests;
 			sourceTree = "<group>";
 		};
 		BD815E711DC7B4930046A2BE /* Model */ = {
@@ -141,6 +168,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E69B13EE483BD80CC92D1704 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F254806890BB3070E9D5586 /* Pods-Desafio iOS.debug.xcconfig */,
+				B86B701E493C5CD8648E1ADC /* Pods-Desafio iOS.release.xcconfig */,
+				4F2A290F7B0CFB37D81D4A7E /* Pods-Desafio iOSTests.debug.xcconfig */,
+				CB50D43F2C4F12498228222C /* Pods-Desafio iOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD3D208A1DC110E5009C070B /* Build configuration list for PBXNativeTarget "Desafio iOS" */;
 			buildPhases = (
+				25FA7C66D2886740908D9043 /* [CP] Check Pods Manifest.lock */,
 				BD3D20741DC110E5009C070B /* Sources */,
 				BD3D20751DC110E5009C070B /* Frameworks */,
 				BD3D20761DC110E5009C070B /* Resources */,
+				467BC811CE063BB291E7A80C /* [CP] Embed Pods Frameworks */,
+				D823E90830FA3BFAF2AE60C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,22 +202,25 @@
 			productReference = BD3D20781DC110E5009C070B /* Desafio iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BD70FF781DCD12920018A297 /* Desafio iOSTests */ = {
+		BD48B3931DD0E522006FB1E2 /* Desafio iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD70FF821DCD12920018A297 /* Build configuration list for PBXNativeTarget "Desafio iOSTests" */;
+			buildConfigurationList = BD48B39B1DD0E522006FB1E2 /* Build configuration list for PBXNativeTarget "Desafio iOSTests" */;
 			buildPhases = (
-				BD70FF751DCD12920018A297 /* Sources */,
-				BD70FF761DCD12920018A297 /* Frameworks */,
-				BD70FF771DCD12920018A297 /* Resources */,
+				BF140B0ECAF555692C0E2A7C /* [CP] Check Pods Manifest.lock */,
+				BD48B3901DD0E522006FB1E2 /* Sources */,
+				BD48B3911DD0E522006FB1E2 /* Frameworks */,
+				BD48B3921DD0E522006FB1E2 /* Resources */,
+				E9949419A85EB457D6CA706F /* [CP] Embed Pods Frameworks */,
+				A008301C013CCDE6B01E11D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BD70FF7F1DCD12920018A297 /* PBXTargetDependency */,
+				BD48B39A1DD0E522006FB1E2 /* PBXTargetDependency */,
 			);
 			name = "Desafio iOSTests";
 			productName = "Desafio iOSTests";
-			productReference = BD70FF791DCD12920018A297 /* Desafio iOSTests.xctest */;
+			productReference = BD48B3941DD0E522006FB1E2 /* Desafio iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -194,10 +238,9 @@
 						DevelopmentTeam = 2A7C9XFDQ7;
 						ProvisioningStyle = Automatic;
 					};
-					BD70FF781DCD12920018A297 = {
+					BD48B3931DD0E522006FB1E2 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2A7C9XFDQ7;
-						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BD3D20771DC110E5009C070B;
 					};
@@ -217,7 +260,7 @@
 			projectRoot = "";
 			targets = (
 				BD3D20771DC110E5009C070B /* Desafio iOS */,
-				BD70FF781DCD12920018A297 /* Desafio iOSTests */,
+				BD48B3931DD0E522006FB1E2 /* Desafio iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD70FF771DCD12920018A297 /* Resources */ = {
+		BD48B3921DD0E522006FB1E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,6 +284,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25FA7C66D2886740908D9043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		467BC811CE063BB291E7A80C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio iOS/Pods-Desafio iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A008301C013CCDE6B01E11D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio iOSTests/Pods-Desafio iOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF140B0ECAF555692C0E2A7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D823E90830FA3BFAF2AE60C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio iOS/Pods-Desafio iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9949419A85EB457D6CA706F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio iOSTests/Pods-Desafio iOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD3D20741DC110E5009C070B /* Sources */ = {
@@ -250,6 +386,8 @@
 				BD815E731DC7B7620046A2BE /* GitHub.swift in Sources */,
 				BD5E7A461DCD387500DAAB0D /* PullRequestViewController.swift in Sources */,
 				BD0303CA1DC7AB6900D285CF /* GitHubTableViewController.swift in Sources */,
+				BD6564551DD26990005E6886 /* RepositoryAFTableViewController.swift in Sources */,
+				BD6564531DD23C6C005E6886 /* GitHubAFTableViewController.swift in Sources */,
 				BD8049C71DCBDEF6008BACC8 /* PullRequest.swift in Sources */,
 				BDEA16B41DC93041002AB755 /* RepositoryTableViewCell.swift in Sources */,
 				BD3D207E1DC110E5009C070B /* Teste.swift in Sources */,
@@ -259,21 +397,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD70FF751DCD12920018A297 /* Sources */ = {
+		BD48B3901DD0E522006FB1E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD70FF861DCD1C170018A297 /* GitHubTableViewControllerTest.swift in Sources */,
+				BD48B3971DD0E522006FB1E2 /* Desafio_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BD70FF7F1DCD12920018A297 /* PBXTargetDependency */ = {
+		BD48B39A1DD0E522006FB1E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BD3D20771DC110E5009C070B /* Desafio iOS */;
-			targetProxy = BD70FF7E1DCD12920018A297 /* PBXContainerItemProxy */;
+			targetProxy = BD48B3991DD0E522006FB1E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -392,6 +530,7 @@
 		};
 		BD3D208B1DC110E5009C070B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F254806890BB3070E9D5586 /* Pods-Desafio iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2A7C9XFDQ7;
@@ -405,6 +544,7 @@
 		};
 		BD3D208C1DC110E5009C070B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B86B701E493C5CD8648E1ADC /* Pods-Desafio iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2A7C9XFDQ7;
@@ -416,34 +556,31 @@
 			};
 			name = Release;
 		};
-		BD70FF801DCD12920018A297 /* Debug */ = {
+		BD48B39C1DD0E522006FB1E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F2A290F7B0CFB37D81D4A7E /* Pods-Desafio iOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2A7C9XFDQ7;
 				INFOPLIST_FILE = "Desafio iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aprendendo.Desafio-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Desafio iOS/Desafio iOSTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio iOS.app/Desafio iOS";
 			};
 			name = Debug;
 		};
-		BD70FF811DCD12920018A297 /* Release */ = {
+		BD48B39D1DD0E522006FB1E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB50D43F2C4F12498228222C /* Pods-Desafio iOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2A7C9XFDQ7;
 				INFOPLIST_FILE = "Desafio iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aprendendo.Desafio-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Desafio iOS/Desafio iOSTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio iOS.app/Desafio iOS";
 			};
@@ -470,11 +607,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD70FF821DCD12920018A297 /* Build configuration list for PBXNativeTarget "Desafio iOSTests" */ = {
+		BD48B39B1DD0E522006FB1E2 /* Build configuration list for PBXNativeTarget "Desafio iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD70FF801DCD12920018A297 /* Debug */,
-				BD70FF811DCD12920018A297 /* Release */,
+				BD48B39C1DD0E522006FB1E2 /* Debug */,
+				BD48B39D1DD0E522006FB1E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,7 +10,7 @@
         <!--Github JavaPop-->
         <scene sceneID="cEK-Ll-VpW">
             <objects>
-                <tableViewController id="929-4P-sLX" customClass="GitHubTableViewController" customModule="Desafio_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="929-4P-sLX" customClass="GitHubAFTableViewController" customModule="Desafio_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="155" sectionHeaderHeight="28" sectionFooterHeight="28" id="z7c-9V-xRb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="1882.4000000000001" y="137.18140929535232"/>
         </scene>
-        <!--Repository Table View Controller-->
+        <!--RepositoryAF Table View Controller-->
         <scene sceneID="cH5-yd-Wpj">
             <objects>
-                <tableViewController id="9sQ-IX-U0l" customClass="RepositoryTableViewController" customModule="Desafio_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="9sQ-IX-U0l" customClass="RepositoryAFTableViewController" customModule="Desafio_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="jWg-c5-ZW6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

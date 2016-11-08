@@ -11,15 +11,13 @@ import UIKit
 
 class PullRequest {
     
-    var repositoryName: String
     var userAvatar: UIImage?
     var userName: String
     var pullRequestName: String
     var pullRequestBody: String
     var pullRequestLink: String
     
-    init(repositoryName: String, userAvatar: UIImage?, userName: String, pullRequestName: String, pullRequestBody: String, pullRequestLink: String) {
-        self.repositoryName = repositoryName
+    init(userAvatar: UIImage?, userName: String, pullRequestName: String, pullRequestBody: String, pullRequestLink: String) {
         self.userAvatar = userAvatar
         self.userName = userName
         self.pullRequestName = pullRequestName
