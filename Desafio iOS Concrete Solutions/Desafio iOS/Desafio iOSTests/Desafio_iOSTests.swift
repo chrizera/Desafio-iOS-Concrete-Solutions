@@ -7,18 +7,35 @@
 //
 
 import XCTest
+import Alamofire
+import SwiftyJSON
+import Foundation
+import UIKit
+@testable import Desafio_iOS
 
 class Desafio_iOSTests: XCTestCase {
     
+    var controller = GitHubAFTableViewController()
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+       
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testGitHub() {
+        let github = GitHub(repositoryName: "", repositoryDescription: "", userAvatar: nil, userName: "", forks: 2, stars: 2)
+        
+        XCTAssertNotNil(github.repositoryName)
+        XCTAssertNotNil(github.repositoryDescription)
+        XCTAssertNotNil(github.userName)
+        XCTAssertNotNil(github.forks)
+        XCTAssertNotNil(github.stars)
     }
     
     func testExample() {

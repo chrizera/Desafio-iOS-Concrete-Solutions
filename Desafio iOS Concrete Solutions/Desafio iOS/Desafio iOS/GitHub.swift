@@ -26,4 +26,5 @@ class GitHub {
         self.forks = forks
         self.stars = stars
     }
+    
 }
