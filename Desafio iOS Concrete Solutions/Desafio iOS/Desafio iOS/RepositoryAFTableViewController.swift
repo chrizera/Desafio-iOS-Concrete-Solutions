@@ -14,8 +14,18 @@ import WebKit
 
 class RepositoryAFTableViewController: UITableViewController {
     
-    let dataSource = RepositoryTableViewDataSource()
+    let repositoryDataSource = RepositoryTableViewDataSource()
+    
     let json = JSONParser()
+    
+    var github: GitHub? {
+        didSet {
+            guard let github = github else { return }
+            self.repositoryName = github.repositoryName
+            self.userName = github.userName
+        }
+    }
+    
     var userName = String()
     var repositoryName = String()
     var webView = WKWebView()
@@ -25,9 +35,9 @@ class RepositoryAFTableViewController: UITableViewController {
         
         navigationItem.title = repositoryName
         
-        self.tableView.dataSource = dataSource
+        self.tableView.dataSource = repositoryDataSource
         
-        json.parseJSONPullRequestList(dataSource: dataSource, tableView: tableView, userName: userName, repositoryName: repositoryName)
+        json.parseJSONPullRequestList(dataSource: repositoryDataSource, tableView: tableView, userName: userName, repositoryName: repositoryName)
         
     }
 
@@ -36,11 +46,9 @@ class RepositoryAFTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let link = dataSource.pullRequestList[indexPath.row].pullRequestLink
+        let link = repositoryDataSource.pullRequestList[indexPath.row].pullRequestLink
         guard let url = URL(string: link) else {return}
         let request = URLRequest(url: url)
         

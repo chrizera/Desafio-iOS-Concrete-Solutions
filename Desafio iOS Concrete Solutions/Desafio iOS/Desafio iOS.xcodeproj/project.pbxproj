@@ -10,6 +10,7 @@
 		0B14672EF80A3422A396E511 /* Pods_Desafio_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACDD85F796A6D9AE2E30B71 /* Pods_Desafio_iOSTests.framework */; };
 		30F2293CC6F3DB553B3BE782 /* Pods_Desafio_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96B7AF3FD1DACACD2890426 /* Pods_Desafio_iOS.framework */; };
 		BD0303CA1DC7AB6900D285CF /* GitHubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0303C91DC7AB6900D285CF /* GitHubTableViewController.swift */; };
+		BD1B66351DDF6FD800407D4C /* GitHubTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B66341DDF6FD800407D4C /* GitHubTableViewDelegate.swift */; };
 		BD2F2CFD1DDCF43A00C3C1F9 /* GitHubTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F2CFC1DDCF43A00C3C1F9 /* GitHubTableViewDataSource.swift */; };
 		BD3D207C1DC110E5009C070B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3D207B1DC110E5009C070B /* AppDelegate.swift */; };
 		BD3D207E1DC110E5009C070B /* Teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3D207D1DC110E5009C070B /* Teste.swift */; };
@@ -45,6 +46,7 @@
 		6ACDD85F796A6D9AE2E30B71 /* Pods_Desafio_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86B701E493C5CD8648E1ADC /* Pods-Desafio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio iOS/Pods-Desafio iOS.release.xcconfig"; sourceTree = "<group>"; };
 		BD0303C91DC7AB6900D285CF /* GitHubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewController.swift; sourceTree = "<group>"; };
+		BD1B66341DDF6FD800407D4C /* GitHubTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewDelegate.swift; sourceTree = "<group>"; };
 		BD2F2CFC1DDCF43A00C3C1F9 /* GitHubTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTableViewDataSource.swift; sourceTree = "<group>"; };
 		BD3D20781DC110E5009C070B /* Desafio iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3D207B1DC110E5009C070B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,9 +172,10 @@
 			children = (
 				BD815E721DC7B7620046A2BE /* GitHub.swift */,
 				BD8049C61DCBDEF6008BACC8 /* PullRequest.swift */,
-				BD2F2CFC1DDCF43A00C3C1F9 /* GitHubTableViewDataSource.swift */,
 				BD9CB2391DDE50CC003B4C2F /* JSONParser.swift */,
+				BD2F2CFC1DDCF43A00C3C1F9 /* GitHubTableViewDataSource.swift */,
 				BD6F6A751DDF6279006768E4 /* RepositoryTableViewDataSource.swift */,
+				BD1B66341DDF6FD800407D4C /* GitHubTableViewDelegate.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				BDEA16B41DC93041002AB755 /* RepositoryTableViewCell.swift in Sources */,
 				BD3D207E1DC110E5009C070B /* Teste.swift in Sources */,
 				BD6F6A761DDF6279006768E4 /* RepositoryTableViewDataSource.swift in Sources */,
+				BD1B66351DDF6FD800407D4C /* GitHubTableViewDelegate.swift in Sources */,
 				BDEA16B21DC9301F002AB755 /* RepositoryTableViewController.swift in Sources */,
 				BD3D207C1DC110E5009C070B /* AppDelegate.swift in Sources */,
 				BD3D208E1DC13685009C070B /* GitHubTableViewCell.swift in Sources */,

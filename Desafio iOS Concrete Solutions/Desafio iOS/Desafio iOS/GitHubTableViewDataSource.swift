@@ -11,7 +11,6 @@ import UIKit
 class GitHubTableViewDataSource: NSObject, UITableViewDataSource {
     
     var githubRepoList = [GitHub]()
-    //var githubRepoList = [String]()
     
     init(githubRepoList: [GitHub]) {
         self.githubRepoList = githubRepoList

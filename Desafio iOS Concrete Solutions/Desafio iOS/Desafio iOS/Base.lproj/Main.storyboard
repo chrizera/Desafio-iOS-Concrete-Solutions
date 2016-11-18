@@ -103,9 +103,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="delegate" destination="929-4P-sLX" id="Bb4-tg-AM4"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Github JavaPop" id="KFT-e3-67z"/>
                     <connections>
@@ -193,9 +190,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="delegate" destination="9sQ-IX-U0l" id="MYZ-BU-B7w"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="pDw-mv-ZfE"/>
                     <connections>
