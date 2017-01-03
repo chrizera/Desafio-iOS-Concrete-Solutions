@@ -8,71 +8,41 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
+import ObjectMapper
 
 class JSONParser {
     
-    func parseJSONRepositoryList(dataSource: GitHubTableViewDataSource, tableView: UITableView) {
-        
+      func parseJSONRepositoryList(dataSource: RepositoryListDataSource, tableView: UITableView) {
+
         let link = "https://api.github.com/search/repositories?q=language:java&sort=stars"
-        guard let url = URL(string: link) else {return}
+        guard let url = URL(string: link) else { return }
+        
         
         Alamofire.request(url).validate().responseJSON { (response) in
             
-            let json = JSON(response.result.value)
-            let githubDictionary = json["items"].array!
+            let repository = Mapper<RepositoryItems>().map(JSON: response.result.value as! [String:Any])
+            guard let items = repository?.items else { return }
             
-            for items in githubDictionary {
-                
-                let github = GitHub(repositoryName: "", repositoryDescription: "", userAvatar: nil, userName: "", forks: 0, stars: 0)
-                
-                let img = items["owner"]["avatar_url"].string!
-                guard let url = URL(string: img) else {return}
-                guard let data = try? Data(contentsOf: url) else {return}
-                
-                github.userAvatar = UIImage(data: data)
-                github.repositoryName = items["name"].string!
-                github.repositoryDescription = items["description"].string!
-                github.forks = items["forks"].int!
-                github.stars = items["stargazers_count"].int!
-                github.userName = items["owner"]["login"].string!
-                
-                dataSource.githubRepoList.append(github)
-            }
-            
+            dataSource.repositoryList.append(contentsOf:items)
             tableView.reloadData()
             
         }
     }
     
-    func parseJSONPullRequestList(dataSource: RepositoryTableViewDataSource, tableView: UITableView, userName: String, repositoryName: String) {
+    func parseJSONPullRequestList(dataSource: PullRequestListDataSource, tableView: UITableView, userName: String?, repositoryName: String?) {
+
+        guard let userName = userName else { return }
+        guard let repositoryName = repositoryName else { return }
         
         let link = "https://api.github.com/repos/\(userName)/\(repositoryName)/pulls"
-        guard let url = URL(string: link) else {return}
+        guard let url = URL(string: link) else { return }
         
         Alamofire.request(url).validate().responseJSON { (response) in
             
-            let json = JSON(response.result.value)
+            guard let pullRequestList = Mapper<PullRequest>().mapArray(JSONArray: response.result.value as! [[String:Any]]) else { return }
+    
+            dataSource.pullRequestList.append(contentsOf: pullRequestList)
             
-            let pullRequestJSONArray = json.array!
-            
-            for items in pullRequestJSONArray {
-                
-                let pullRequest = PullRequest(userAvatar: nil, userName: "", pullRequestName: "", pullRequestBody: "", pullRequestLink: "")
-                
-                let img = items["user"]["avatar_url"].string!
-                guard let url = URL(string: img) else {return}
-                guard let data = try? Data(contentsOf: url) else {return}
-                
-                pullRequest.userAvatar = UIImage(data: data)
-                pullRequest.pullRequestBody = items["body"].string!
-                pullRequest.pullRequestName = items["title"].string!
-                pullRequest.pullRequestLink = items["html_url"].string!
-                pullRequest.userName = items["user"]["login"].string!
-                
-                dataSource.pullRequestList.append(pullRequest)
-                
-            }
             tableView.reloadData()
         }
     }

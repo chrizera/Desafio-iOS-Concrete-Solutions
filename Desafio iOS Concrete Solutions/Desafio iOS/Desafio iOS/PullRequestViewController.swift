@@ -16,7 +16,6 @@ class PullRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(webView)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

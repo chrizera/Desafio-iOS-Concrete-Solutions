@@ -7,21 +7,21 @@
 //
 
 import Foundation
-import UIKit
+import ObjectMapper
 
-class PullRequest {
+class PullRequest: Mappable {
     
-    var userAvatar: UIImage?
-    var userName: String
-    var pullRequestName: String
-    var pullRequestBody: String
-    var pullRequestLink: String
+    var name: String?
+    var body: String?
+    var link: URL?
+    var user: PullRequestUser?
     
-    init(userAvatar: UIImage?, userName: String, pullRequestName: String, pullRequestBody: String, pullRequestLink: String) {
-        self.userAvatar = userAvatar
-        self.userName = userName
-        self.pullRequestName = pullRequestName
-        self.pullRequestBody = pullRequestBody
-        self.pullRequestLink = pullRequestLink
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        name <- map["title"]
+        body <- map["body"]
+        link <- (map["html_url"], URLTransform())
+        user <- map["user"]
     }
 }
