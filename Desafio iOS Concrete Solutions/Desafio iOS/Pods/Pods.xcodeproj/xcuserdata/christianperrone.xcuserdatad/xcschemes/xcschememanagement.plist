@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Desafio iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +47,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>386BE4A39C559322BF1F7BEF2FE7FE6F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>67E04404E987EFDF08480545B8E262F2</key>
+		<key>5F0DC107A29688BF3E39108932BED229</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B43918AB915242B851ABEFB5D70BE0AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF87556A70EEDAC589558D0DD865E646</key>
 		<dict>
 			<key>primary</key>
 			<true/>
